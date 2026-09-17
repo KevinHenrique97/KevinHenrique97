@@ -8,7 +8,6 @@
   front em Next.js e bancos PostgreSQL na AWS.
 </p>
 
-
 ---
 
 ### 🚀 Sobre mim
@@ -17,7 +16,7 @@
 - 🖥️ **Frontend** com Next.js, React e Ant Design
 - 🗄️ **Dados**: PostgreSQL, SQL bruto, migrations versionadas
 - ☁️ **Infra**: Docker, AWS (ECS, S3, SQS, Lambda), Terraform, CI/CD com GitHub Actions
-- 📍 Baseado em São Paulo, aberto a bons desafios de engenharia
+- 📍 Baseado em São Paulo
 
 ---
 
@@ -30,18 +29,8 @@
 
 ---
 
-### 📊 Estatísticas
+### 📊 Atividade
 
 <p align="center">
-  <img src="./github-metrics.svg" alt="Estatísticas do GitHub" />
-</p>
-
-<p align="center">
-  <img src="https://streak-stats.demolab.com/?user=KevinHenrique97&theme=tokyonight&hide_border=true&date_format=j%20M%5B%20Y%5D" />
-</p>
-
-<br/>
-
-<p align="center">
-  <i>“Código bom é aquele que o próximo dev entende sem te chamar.”</i>
+  <img src="https://streak-stats.demolab.com/?user=KevinHenrique97&theme=tokyonight&hide_border=true&date_format=j%20M%5B%20Y%5D" alt="Streak de contribuições" />
 </p>
