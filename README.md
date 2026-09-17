@@ -28,7 +28,3 @@
 <p align="center">
   <img src="https://streak-stats.demolab.com/?user=KevinHenrique97&theme=tokyonight&hide_border=true" />
 </p>
-
-<p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=KevinHenrique97&theme=tokyonight&no-frame=true&column=7&margin-w=10" />
-</p>
