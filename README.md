@@ -21,8 +21,7 @@
 ### 📊 Estatísticas do GitHub
 
 <p align="center">
-  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=KevinHenrique97&show_icons=true&count_private=true&include_all_commits=true&theme=tokyonight&hide_border=true" />
-  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=KevinHenrique97&layout=compact&langs_count=8&theme=tokyonight&hide_border=true" />
+  <img src="./github-metrics.svg" alt="Estatísticas do GitHub" />
 </p>
 
 <p align="center">
