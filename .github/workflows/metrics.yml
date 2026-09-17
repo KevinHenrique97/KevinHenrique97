@@ -11,7 +11,10 @@ jobs:
     permissions:
       contents: write
     steps:
-      - name: Estatísticas do perfil
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Gerar estatísticas
         uses: lowlighter/metrics@latest
         with:
           # Usa o METRICS_TOKEN (se você criar um, conta os privados);
@@ -19,8 +22,35 @@ jobs:
           token: ${{ secrets.METRICS_TOKEN || secrets.GITHUB_TOKEN }}
           user: KevinHenrique97
           filename: github-metrics.svg
+          output_action: none
           template: classic
           base: header, activity, repositories, metadata
           config_timezone: America/Sao_Paulo
           # Inclui repositórios privados / de organização na contagem (precisa do METRICS_TOKEN)
           repositories_affiliations: owner, collaborator, organization_member
+
+      - name: Remover a linha "Pull requests reviewed"
+        run: |
+          python3 - << 'PY'
+          import re
+          f = "github-metrics.svg"
+          s = open(f, encoding="utf-8").read()
+          idx = s.find("Pull requests reviewed")
+          if idx == -1:
+              print("Texto não encontrado (ok se já removido).")
+          else:
+              opens = [m.start() for m in re.finditer(r'<div class="field', s[:idx])]
+              start = opens[-1]
+              end = s.find("</div>", idx) + len("</div>")
+              s = s[:start] + s[end:]
+              open(f, "w", encoding="utf-8").write(s)
+              print("Linha 'Pull requests reviewed' removida.")
+          PY
+
+      - name: Commitar imagem
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add github-metrics.svg
+          git commit -m "Update github-metrics.svg [Skip GitHub Action]" || echo "Sem mudanças."
+          git push
