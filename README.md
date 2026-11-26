@@ -16,7 +16,7 @@
 - 🖥️ **Frontend** com Next.js, React e Ant Design
 - 🗄️ **Dados**: PostgreSQL, SQL bruto, migrations versionadas
 - ☁️ **Infra**: Docker, AWS (ECS, S3, SQS, Lambda), Terraform, CI/CD com GitHub Actions
-- 📍 Baseado em São Paulo
+- 📍 São Paulo
 
 ---
 
